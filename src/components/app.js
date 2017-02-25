@@ -1,7 +1,9 @@
-angular.module('video-player')
+angular.module('video-player')  // square brackets????? 
 .controller('AppController', function($scope) {
   $scope.videos = window.exampleVideoData;
   $scope.video = window.exampleVideoData[0];
+  // $scope.selectVideo = function() {};
+  // $scope.searchResults = function() {};
   console.log('app ', $scope);
   // $scope.
 
@@ -10,15 +12,16 @@ angular.module('video-player')
 
   return {
     
-    // controllerAs: 'ctrl',
-    // bindToController: 'true',
+    controller: 'AppController',
+    controllerAs: 'ctrl',
+    bindToController: 'true',
+    templateUrl: 'src/templates/app.html',
     // scope: {
     //   selectVideo: '<',
     //   searchResults: '<',
     //   currentVideo: '<',
-    //   videos: '<',
-    //   // ctrl: this.controller
+    //   videos: '<'
+    // //   // ctrl: this.controller
     // }, 
-    templateUrl: 'src/templates/app.html'
   };
 });
