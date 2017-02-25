@@ -1,6 +1,19 @@
 angular.module('video-player')
+
 .directive('videoListEntry', function() {
   return {
+    scope: {
+      video: '<'
+    }, 
+    // controller: function($scope) {
+    //   // $scope.video = $scope.video;
+    //   console.log('SCOPE IN VLE: ', $scope);
+    // },
+    controllerAs: 'ctrl',
+    bindToController: true,
+    controller: function($scope) {
+      console.log('VLE: ', $scope);
+    },
     templateUrl: 'src/templates/videoListEntry.html'
   };
 });
