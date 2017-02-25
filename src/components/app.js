@@ -1,27 +1,32 @@
 angular.module('video-player')  // square brackets????? 
-.controller('AppController', function($scope) {
-  $scope.videos = window.exampleVideoData;
-  $scope.video = window.exampleVideoData[0];
-  // $scope.selectVideo = function() {};
-  // $scope.searchResults = function() {};
-  console.log('app ', $scope);
-  // $scope.
-
-})
 .directive('app', function() {
 
   return {
     
-    controller: 'AppController',
+    controller: function($window) {
+      var ctrl = this;
+      // console.log(this);
+      ctrl.selectVideo = function() {};
+      ctrl.searchResults = function() {};
+      ctrl.videos = window.exampleVideoData;
+      ctrl.currentVideo = window.exampleVideoData[0];
+
+    },
+    scope: {},
     controllerAs: 'ctrl',
-    bindToController: 'true',
-    templateUrl: 'src/templates/app.html',
+    bindToController: true,
+    templateUrl: 'src/templates/app.html'
     // scope: {
-    //   selectVideo: '<',
-    //   searchResults: '<',
-    //   currentVideo: '<',
-    //   videos: '<'
     // //   // ctrl: this.controller
     // }, 
+// .controller('AppController', function($scope) {
+//   $scope.videos = window.exampleVideoData;
+//   $scope.video = window.exampleVideoData[0];
+//   // $scope.selectVideo = function() {};
+//   // $scope.searchResults = function() {};
+//   console.log('app ', $scope);
+//   // $scope.
+
+// })
   };
 });
