@@ -3,7 +3,8 @@ angular.module('video-player')
 .directive('videoListEntry', function() {
   return {
     scope: {
-      video: '<'
+      video: '<',
+      onClick: '&'
     }, 
     // controller: function($scope) {
     //   // $scope.video = $scope.video;

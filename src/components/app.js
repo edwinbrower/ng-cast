@@ -6,10 +6,14 @@ angular.module('video-player')  // square brackets?????
     controller: function($window) {
       var ctrl = this;
       // console.log(this);
-      ctrl.selectVideo = function() {};
-      ctrl.searchResults = function() {};
       ctrl.videos = window.exampleVideoData;
       ctrl.currentVideo = window.exampleVideoData[0];
+      ctrl.selectVideo = function() {};
+      ctrl.searchResults = function() {};
+      ctrl.onClick = function(index) {
+        console.log('index ', index);
+        ctrl.currentVideo = ctrl.videos[index];
+      };
 
     },
     scope: {},
@@ -30,3 +34,6 @@ angular.module('video-player')  // square brackets?????
 // })
   };
 });
+
+// What we had would have likely worked had we spelled ctrl correct the whole time had ctlr and ctrl
+// BOOOOOOOOO
