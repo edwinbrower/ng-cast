@@ -1,8 +1,8 @@
 angular.module('video-player')
 .controller('AppController', function($scope) {
-  console.log('app ', $scope);
   $scope.videos = window.exampleVideoData;
   $scope.video = window.exampleVideoData[0];
+  console.log('app ', $scope);
   // $scope.
 
 })

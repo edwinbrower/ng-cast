@@ -4,6 +4,7 @@ angular.module('video-player')
   return {
     scope: {
       videos: '<',
+      video: '<',
       onClick: '<'
     },
     // controller: function($scope) {
