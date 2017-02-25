@@ -1,9 +1,13 @@
 angular.module('video-player')  // square brackets????? 
+// .run('youTube', function() {
+//   var YouTube = new youTube();
+//   // var searchResults = YouTube.search();
+// })
 .directive('app', function() {
 
   return {
     
-    controller: function($window) {
+    controller: function($window, youTube) {
       var ctrl = this;
       // console.log(this);
       ctrl.videos = window.exampleVideoData;
@@ -14,7 +18,10 @@ angular.module('video-player')  // square brackets?????
         console.log('index ', index);
         ctrl.currentVideo = ctrl.videos[index];
       };
-
+      ctrl.search = youTube.search;
+      // ctrl.search();
+      console.log(youTube.search);
+      // ctrl.$inject = [$scope, 'youTube'];
     },
     scope: {},
     controllerAs: 'ctrl',
@@ -30,10 +37,6 @@ angular.module('video-player')  // square brackets?????
 //   // $scope.searchResults = function() {};
 //   console.log('app ', $scope);
 //   // $scope.
-
 // })
   };
 });
-
-// What we had would have likely worked had we spelled ctrl correct the whole time had ctlr and ctrl
-// BOOOOOOOOO

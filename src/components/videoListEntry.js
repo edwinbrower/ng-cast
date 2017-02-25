@@ -6,14 +6,10 @@ angular.module('video-player')
       video: '<',
       onClick: '&'
     }, 
-    // controller: function($scope) {
-    //   // $scope.video = $scope.video;
-    //   console.log('SCOPE IN VLE: ', $scope);
-    // },
     controllerAs: 'ctrl',
     bindToController: true,
     controller: function($scope) {
-      console.log('VLE: ', $scope);
+      // console.log('VLE: ', $scope);
     },
     templateUrl: 'src/templates/videoListEntry.html'
   };

@@ -4,7 +4,6 @@ angular.module('video-player')
   return {
     scope: {
       videos: '<',
-      // video: '<',
       onClick: '<'
     },
     // controller: function($scope) {
@@ -15,7 +14,7 @@ angular.module('video-player')
     controllerAs: 'ctrl',
     bindToController: true,
     controller: function($scope) {
-      console.log('VideoList: ', $scope);
+      // console.log('VideoList: ', $scope);
     },
     templateUrl: 'src/templates/videoList.html'
   };

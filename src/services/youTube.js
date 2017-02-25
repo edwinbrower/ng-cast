@@ -1,5 +1,7 @@
 angular.module('video-player')
 .service('youTube', function() {
-  // TODO
+  this.search = function(query) {
+    console.log('hello world');
+  };
+
 });
-// havent done anything yet
