@@ -1,5 +1,7 @@
 angular.module('video-player')
-
+// .controller('VideoPlayerCtrl', function() {
+//   this.
+// })
 .directive('videoPlayer', function() {
   return {
     scope: {

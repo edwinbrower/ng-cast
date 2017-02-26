@@ -13,13 +13,15 @@
       mocha.setup('bdd');
       var expect = chai.expect;
       $(function() {
-        window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run()
+        window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
       });
     </script>
 
     <!-- include source files here... -->
     <script src="spec/data/fakeVideoData.js"></script>
     <script src="spec/data/moreFakeVideoData.js"></script>
+    <script src="src/services/youtube.js"></script>
+    
     <script src="src/config/youtube.js"></script>
     <script src="src/lib/searchYouTube.js"></script>
     <script src="src/data/exampleVideoData.js"></script>

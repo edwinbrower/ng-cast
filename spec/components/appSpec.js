@@ -27,14 +27,12 @@ describe('app', function() {
     youTubeSpy = sinon.spy(youTube, 'search');
 
     element = angular.element('<app></app>');
-    debugger;
     element = $compile(element)(scope);
 
     $rootScope.$digest();
   }));
 
   it('should have a selectVideo function on the scope', function() {
-    debugger;
     expect(element.isolateScope().ctrl.selectVideo).to.exist;
     expect(element.isolateScope().ctrl.selectVideo).to.be.a('function');
   });
