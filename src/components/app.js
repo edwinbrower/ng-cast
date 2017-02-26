@@ -1,14 +1,13 @@
-angular.module('video-player')  // square brackets????? 
+angular.module('video-player')
 .controller('AppCtrl', function(youTube) {
 
-  this.searchService = youTube; // why???
+  this.searchService = youTube;
 
   this.selectVideo = (video) => {
     this.currentVideo = video;
   };
 
   this.searchResults = (data) => {
-    // console.log(data);
     this.videos = data;
     this.currentVideo = this.videos[0];
   };
